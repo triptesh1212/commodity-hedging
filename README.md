@@ -37,7 +37,7 @@ Since p-value << 0.05, we can reject Null Hypothesis, strongly confiring the pre
 
 The high persistence value (~ 1) indicates that shocks to volatility decay slowly, consistent with volatility clustering observed in financial time series.
 
-The figure below shows the conditional volatility estimated by the GARCH(1,1) model.
+The figure below shows the conditional volatility estimated by the AR(1)-GARCH(1,1) model.
 
 ![Conditional Volatility](plots/conditional_volatility.png)
 
