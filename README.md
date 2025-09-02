@@ -21,7 +21,7 @@ This project focuses on developing, analyzing, and backtesting **Hedging** strat
 
 ## Model Diagnostics
 
-Ttested for ARCH effects in Brent crude returns to verify volatility clustering.
+Tested ARCH effects in Brent crude returns to verify volatility clustering.
 
 **Engle’s ARCH LM Test Result :**
   - LM Statistic: ~ 121.93 
