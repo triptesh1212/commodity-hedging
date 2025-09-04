@@ -18,21 +18,17 @@ def compute_with_no_hedge():
 
     var_spot = df['Spot_ret'].var()
 
-    # Sharpe ratio (annualized)
     mean_spot = df['Spot_ret'].mean()
     vol_spot = df['Spot_ret'].std()
 
-    rf = 0  # risk-free rate assumed 0
+    rf = 0  # risk-free rate
     sharpe_spot = ((mean_spot - rf) / vol_spot) * np.sqrt(252)
 
-    # Max drawdown
     mdd_spot = max_drawdown(df['Spot_ret'])
 
-    print("<--------- No Hedge ---------->")
-    print("")
+    print("<--------- No Hedge ---------->\n")
 
     print(f"Variance of Spot (unhedged): {var_spot:.6f}")
     print(f"Sharpe Ratio (Unhedged): {sharpe_spot:.6f}")
-    print(f"Max Drawdown (Unhedged): {mdd_spot * 100:.6f}%")
+    print(f"Max Drawdown (Unhedged): {mdd_spot * 100:.6f}%\n")
     
-    print("")

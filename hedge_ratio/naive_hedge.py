@@ -32,12 +32,9 @@ def compute_naive_hedge(file_path="dataset/brent_spot_futures.csv"):
 
     mdd_hedged = max_drawdown(df['Hedged_ret'])
 
-    # Print results
-    print("<--------- Naive Hedge ---------->")
-    print("")
+    print("<--------- Naive Hedge ---------->\n")
 
     print(f"Variance of Naive Hedged Portfolio: {var_hedged:.6f}")
     print(f"Hedge Effectiveness (Naive): {hedge_effectiveness * 100:.6f}%")
     print(f"Sharpe Ratio (Naive Hedged): {sharpe_hedged:.6f}")
-    print(f"Max Drawdown (Naive Hedged): {mdd_hedged * 100:.6f}%")
-    print("")
+    print(f"Max Drawdown (Naive Hedged): {mdd_hedged * 100:.6f}%\n")

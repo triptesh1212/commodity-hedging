@@ -37,10 +37,12 @@ def compute_ols_hedge():
     mean_hedged = test['Hedged_ret'].mean()
     vol_hedged = test['Hedged_ret'].std()
 
-    sharpe_hedged = (mean_hedged / vol_hedged) * np.sqrt(252) if vol_hedged > 0 else np.nan
+    rf = 0  # risk-free rate
+    sharpe_hedged = ((mean_hedged - rf) / vol_hedged) * np.sqrt(252)
+
     mdd_hedged = max_drawdown(test['Hedged_ret'])
 
-    print("\n<--------- OLS Hedge---------->\n")
+    print("<--------- OLS Hedge---------->\n")
 
     print(f"Variance of OLS Hedged Portfolio: {var_hedged:.6f}")
     print(f"Hedge Effectiveness (OLS Hedge): {he_ols * 100:.6f}%")
