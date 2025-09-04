@@ -14,7 +14,7 @@ This project focuses on developing, analyzing, and backtesting **Hedging** strat
   - Naive Hedge 
   - Static OLS Hedge Ratio
   - Dynamic Rolling OLS Hedge Ratio
-  - BEKK-GARCH Hedge Ratio
+  - Dynamic DCC-GARCH Hedge Ratio
 
 - **Hedging Performance Analysis** in terms of hedging effectiveness metric, Sharpe ratio, drawdowns
 
@@ -56,12 +56,12 @@ The figure below shows the conditional volatility estimated by the AR(1)-GARCH(1
 
 **Performance Comparison: OLS vs Rolling OLS vs BEKK-GARCH (Train:2018 - 2023, Test: 2024)**
 
-| Metric              | OLS        | Rolling OLS   | BEKK-GARCH   |
-|---------------------|-----------:|--------------:|-------------:|
-| Variance            | 0.000143   |  0.000123 |  |
-| Hedge Effectiveness | 51.17%     |  58.08%   |  |
-| Sharpe Ratio        | -0.0381    |  -0.1494  |  |
-| Max Drawdown        | -8.83%     |  -9.001 % |  |
+| Metric              | OLS        | Rolling OLS   | DCC-GARCH   |
+|---------------------|-----------:|--------------:|------------:|
+| Variance            | 0.000143   |  0.000123     |   0.000121  |
+| Hedge Effectiveness | 51.17%     |  58.08%       |  58.74%     |
+| Sharpe Ratio        | -0.0381    |  -0.1494      | -0.3743     |
+| Max Drawdown        | -8.83%     |  -9.001%      | -13.78%     |
 
 
 
