@@ -11,9 +11,10 @@ This project focuses on developing, analyzing, and backtesting **Hedging** strat
 - **Return & Volatility Modeling** using AR-GARCH model
     
 - **Hedge Ratio Estimation** with various approaches 
-  - Naive Hedge (1-to-1 ratio)
+  - Naive Hedge 
   - Static OLS Hedge Ratio
-  - Dynamic Hedge Ratio
+  - Dynamic Rolling OLS Hedge Ratio
+  - BEKK-GARCH Hedge Ratio
 
 - **Hedging Performance Analysis** in terms of hedging effectiveness metric, Sharpe ratio, drawdowns
 
@@ -40,6 +41,29 @@ The high persistence value (~ 1) indicates that shocks to volatility decay slowl
 The figure below shows the conditional volatility estimated by the AR(1)-GARCH(1,1) model.
 
 ![Conditional Volatility](plots/conditional_volatility.png)
+
+---
+
+**Performance Analysis: Naive Hedge vs No Hedge (2018–2024)**
+
+| Metric                        | No Hedge (Spot)   | Naive Hedge (1-to-1) |
+|-------------------------------|------------------:|---------------------:|
+| Variance                      | 0.001177          | 0.000399             |
+| Hedge Effectiveness           | –                 | 66.13%               |
+| Sharpe Ratio                  | 0.0288            | -0.0015              |
+| Max Drawdown                  | -94.95%           | -63.92%              |
+
+
+**Performance Comparison: OLS vs Rolling OLS vs BEKK-GARCH (Train:2018 - 2023, Test: 2024)**
+
+| Metric              | OLS        | Rolling OLS   | BEKK-GARCH   |
+|---------------------|-----------:|--------------:|-------------:|
+| Variance            | 0.000143   |   |  |
+| Hedge Effectiveness | 51.17%     |   |  |
+| Sharpe Ratio        | -0.0381    |   |  |
+| Max Drawdown        | -8.83%     |   |  |
+
+
 
 
 
