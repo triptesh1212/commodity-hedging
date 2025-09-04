@@ -58,10 +58,10 @@ The figure below shows the conditional volatility estimated by the AR(1)-GARCH(1
 
 | Metric              | OLS        | Rolling OLS   | BEKK-GARCH   |
 |---------------------|-----------:|--------------:|-------------:|
-| Variance            | 0.000143   |   |  |
-| Hedge Effectiveness | 51.17%     |   |  |
-| Sharpe Ratio        | -0.0381    |   |  |
-| Max Drawdown        | -8.83%     |   |  |
+| Variance            | 0.000143   |  0.000123 |  |
+| Hedge Effectiveness | 51.17%     |  58.08%   |  |
+| Sharpe Ratio        | -0.0381    |  -0.1494  |  |
+| Max Drawdown        | -8.83%     |  -9.001 % |  |
 
 
 
